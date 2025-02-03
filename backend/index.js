@@ -3,9 +3,15 @@
 const express= require('express');
 const mongoose= require('mongoose');
 const dotenv= require('dotenv');
+//add schemas
+const students = require('./models/studSchema');
+
 var cors=require('cors');
 
 const app=express();
+
+
+
 dotenv.config();
 
 
