@@ -7,7 +7,7 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg navbar-light bg-primary">
         <div className="container">
           <Link className="navbar-brand text-white" href="#">
-            Navbar
+            MERN CRUD
           </Link>
           <button
             className="navbar-toggler"
