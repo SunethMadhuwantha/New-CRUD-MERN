@@ -2,15 +2,17 @@
 
 const express= require('express');
 const mongoose= require('mongoose');
+const dotenv= require('dotenv');
 var cors=require('cors');
 
 const app=express();
+dotenv.config();
 
 
 app.use(cors());
 
-mongoose.connect("mongodb+srv://Admin1:J7pzhytu3iJXL1rX@cluster0.xrmrc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then(()=>{
-    console.log("Connectiom done");
+mongoose.connect(process.env.Database).then(()=>{
+    console.log("DATABASE Connectiom done");
 }).catch((err)=>{
     console.log(err)
 })
