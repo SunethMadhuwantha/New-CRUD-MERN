@@ -17,6 +17,25 @@ export default function Addstud() {
     })
   }
 
+  const addStudData=async (e)=>{
+    e.preventDefault();
+    const {name,address,subject,mobile}=inputval;
+    const res =await fetch("http://localhost:5000/addstud",{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({name,address,subject,mobile})
+    });
+    const data =await res.json();
+    console.log(data);
+
+    if(res.status===422 || !data){
+      alert("error")
+    }else{
+      setInputval(data);
+      alert("Added Successfully");
+    }
+  }
+
   return (
     <div className='container mt-3'>
       <form className='mx-auto w-50 shadow p-5'>
@@ -46,7 +65,7 @@ export default function Addstud() {
     name='mobile' onChange={setData} value={inputval.mobile} aria-describedby="emailHelp"/>
     
   </div>
-  <button className='btn btn-primary'>Add</button>
+  <button className='btn btn-primary' onClick={addStudData}>Add</button>
   
 </form>
     </div>
