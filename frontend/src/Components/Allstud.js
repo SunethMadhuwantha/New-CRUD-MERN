@@ -1,17 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Allstud() {
   return (
     <div className='container mt-5'>
         <div className='mt-5'>
-            <button className='btn btn-success mt-3'>Add Student</button>
+            <Link className='btn btn-success mt-3' to="/addstud">Add Student</Link>
         </div>
+        
       <table class="table mt-3">
   <thead>
     <tr className='bg-success'>
       <th scope="col">ID</th>
       <th scope="col">Name</th>
-      <th scope="col">Adress</th>
+      <th scope="col">Address</th>
       <th scope="col">Subject</th>
       <th scope="col">Mobile</th>
       <th scope="col">Action</th>
