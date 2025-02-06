@@ -41,7 +41,7 @@ export default function Editstud() {
     
   </div>
   <div class="mb-3 ">
-    <label htmlFor="exampleInputEmail1" class="form-label">Student Mobile</label>
+    <label htmlFor="exampleInputEmail1" class="form-label">Student Mobile </label >
     <input type="text" class="form-control" id="exampleInputEmail1" 
     name='mobile' onChange={setData} value={inputval.mobile} aria-describedby="emailHelp"/>
     
